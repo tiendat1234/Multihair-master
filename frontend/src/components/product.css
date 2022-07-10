@@ -1,0 +1,34 @@
+.text-dcr {
+  text-decoration: none;
+  color: black;
+}
+
+.card-dcr {
+  border-radius: 15px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.card-dcr:hover {
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.2);
+}
+
+.ofv {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  flex-shrink: 0;
+  transition: all 1s ease;
+}
+.ofv:hover {
+  transform: scale(1.1);
+  overflow: hidden;
+  border-radius: 2%;
+}
+.of-h {
+  overflow: hidden;
+}
+
+.post-content {
+  flex: 1 !important;
+  height: 500px;
+}
