@@ -197,7 +197,11 @@ function App() {
               ></Route>
               <Route
                 path="/shipping"
-                element={<ShippingAddressScreen />}
+                element={
+                  <ProtectedRoute>
+                    <ShippingAddressScreen />
+                  </ProtectedRoute>
+                }
               ></Route>
               <Route path="/payment" element={<PaymentMethodScreen />}></Route>
               {/* Admin Routes */}

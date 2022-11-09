@@ -78,11 +78,12 @@ export default function OrderScreen() {
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
 
   function createOrder(data, actions) {
+    const final = Math.abs(order.totalPrice / 24000).toFixed(2);
     return actions.order
       .create({
         purchase_units: [
           {
-            amount: { value: order.totalPrice },
+            amount: { value: final },
           },
         ],
       })

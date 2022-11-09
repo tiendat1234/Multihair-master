@@ -145,7 +145,13 @@ function ProductScreen() {
                 numReviews={product.numReviews}
               ></Rating>
             </ListGroup.Item>
-            <ListGroup.Item>Giá : ${product.price}</ListGroup.Item>
+            <ListGroup.Item>
+              Giá : $
+              {product.price.toLocaleString("vi", {
+                style: "currency",
+                currency: "VND",
+              })}
+            </ListGroup.Item>
             <ListGroup.Item>
               <Row xs={1} md={2} className="g-2">
                 {[product.image, ...product.images].map((x) => (
@@ -177,7 +183,13 @@ function ProductScreen() {
                 <ListGroup.Item>
                   <Row>
                     <Col>Giá:</Col>
-                    <Col>${product.price}</Col>
+                    <Col>
+                      $
+                      {product.price.toLocaleString("vi", {
+                        style: "currency",
+                        currency: "VND",
+                      })}
+                    </Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
