@@ -69,5 +69,17 @@ const data = {
       description: "high quality product",
     },
   ],
+  discounts: [
+    {
+      name: "giam40",
+      number: 40,
+      quantity: 10,
+    },
+    {
+      name: "giam50",
+      number: 30,
+      quantity: 10,
+    },
+  ],
 };
 export default data;

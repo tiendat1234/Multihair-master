@@ -34,6 +34,8 @@ import OrderListScreen from "./screens/OrderListScreen";
 import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
 import Footer from "./components/Footer";
+import DiscountScreen from "./screens/DiscountScreen";
+import DiscountEditScreen from "./screens/DiscountEditScreen";
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -130,6 +132,9 @@ function App() {
                       </LinkContainer>
                       <LinkContainer to="/admin/users">
                         <NavDropdown.Item>Tài Khoản</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/discounts">
+                        <NavDropdown.Item>Mã Giảm Giá</NavDropdown.Item>
                       </LinkContainer>
                     </NavDropdown>
                   )}
@@ -242,6 +247,22 @@ function App() {
                 element={
                   <AdminRoute>
                     <ProductEditScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/discounts"
+                element={
+                  <AdminRoute>
+                    <DiscountScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/discounts/:id"
+                element={
+                  <AdminRoute>
+                    <DiscountEditScreen />
                   </AdminRoute>
                 }
               ></Route>
